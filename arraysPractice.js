@@ -65,7 +65,15 @@ reveredLooper(letters);
 var nums = [1, 2, 3, 6, 22, 98, 45, 23, 22, 12];
 //Write a function named evenFinder that is given nums as it's only argument and removes all values that aren't even from the given array.
 
-//Code Here
+var nums = [1, 2, 3, 6, 22, 98, 45, 23, 22, 12];
+function evenFinder(nums) {
+  
+  for(var x in nums) {
+    if(nums[x] % 2 === 1) {
+      alert: nums[x];
+    }
+  }
+};
 
 
 //Next problem
@@ -91,7 +99,16 @@ var getRandomArbitrary = function () {
 var numbers = [0, 3, 4, 5, 6, 7, 9, 14, 17, 24, 25, 26, 29, 30];
 //Above you're given a function that will return a random number between 0 and 30, and an array full of numbers. Your job is to write a function named finder that will get a random number, then loop through the array to see if that random number is in the array. If it is, return true, if it's not, return false
 
-//Code Here
+
+function finder() {
+  var someNum = getRandomArbitrary();
+  for(var d in numbers) {
+    if([d] == someNum) {
+      return true;
+    };
+  };
+  return false;
+}
 
 
 //Next problem
