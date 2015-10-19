@@ -22,7 +22,7 @@ var arr = [40, 50, 60];
 
 
 function last(arr) {
-  return arr[arr.length -1];
+  return arr[arr.length - 1];
 };
 
 last(arr);
@@ -34,7 +34,7 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 //Create a function named 'looper' that is given family as it's only argument, loops through the given array, and alerts every item in the array.
 
 function looper(family) {
-  for(var v in family) {
+  for (var v in family) {
     alert(family[v]);
   }
 };
@@ -49,7 +49,14 @@ looper(family);
 var letters = ['A', 'B', 'C', 'D', 'E'];
 //Write a function called reversedLooper that is given letters as it's only argument and loops through the given array backwards alerting every item in the array starting at the end.
 
-//Code Here
+var letters = ['A', 'B', 'C', 'D', 'E'];
+function reveredLooper(letters) {
+  for (var c = letters.length - 1; c >= 0; c--) {
+    alert(letters[c]);
+  }
+};
+
+reveredLooper(letters);
 
 
 //Next Problem
