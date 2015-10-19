@@ -66,10 +66,10 @@ var nums = [1, 2, 3, 6, 22, 98, 45, 23, 22, 12];
 //Write a function named evenFinder that is given nums as it's only argument and removes all values that aren't even from the given array.
 
 function evenFinder(nums) {
-  
-  for(var x in nums) {
-    if(nums[x] % 2 !== 0) {
-    nums.splice(x,1);
+
+  for (var x in nums) {
+    if (nums[x] % 2 !== 0) {
+      nums.splice(x, 1);
     }
   }
   return nums;
@@ -94,12 +94,12 @@ var odds = [];
 
 function divider(nums, evens, odds) {
   for (var f in nums) {
-    if(nums[f] % 2 !== 0) {
+    if (nums[f] % 2 !== 0) {
       odds.push(nums[f]);
-     } else {
-     evens.push(nums[f]);
-     };
-  } 
+    } else {
+      evens.push(nums[f]);
+    };
+  }
   return [odds, evens];
 };
 
@@ -118,8 +118,8 @@ var numbers = [0, 3, 4, 5, 6, 7, 9, 14, 17, 24, 25, 26, 29, 30];
 
 function finder() {
   var someNum = getRandomArbitrary();
-  for(var d in numbers) {
-    if([d] == someNum) {
+  for (var d in numbers) {
+    if ([d] == someNum) {
       return true;
     };
   };
@@ -143,7 +143,7 @@ console.log(reverse(str));
 //Next Problem
 
 
-var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
+
 /*
   Here we're going to write a function that mimics going shopping and checking things off of our grocery list,
   and adding new items to our list. 
@@ -157,8 +157,19 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   myGroceryList then return the new, updated grocery list.
 */
 
-//Code Here
+function removeItem(myGroceryList, item) {
+  if (myGroceryList.indexOf(item) !== -1) {
+    myGroceryList.splice(myGroceryList.indexOf(item), 1);
+  } 
+   else {
+     myGroceryList.push(item);
+   }
+  return myGroceryList;
+}
 
+var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
+console.log(removeItem(myGroceryList, 'soda'));
+console.log(removeItem(myGroceryList, 'pizza'));
 //removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
 
