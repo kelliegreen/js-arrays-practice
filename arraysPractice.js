@@ -35,7 +35,7 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 
 function looper(family) {
   for (var v in family) {
-    alert(family[v]);
+    //alert(family[v]);
   }
 };
 
@@ -52,7 +52,7 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 var letters = ['A', 'B', 'C', 'D', 'E'];
 function reveredLooper(letters) {
   for (var c = letters.length - 1; c >= 0; c--) {
-    alert(letters[c]);
+    //alert(letters[c]);
   }
 };
 
@@ -65,16 +65,17 @@ reveredLooper(letters);
 var nums = [1, 2, 3, 6, 22, 98, 45, 23, 22, 12];
 //Write a function named evenFinder that is given nums as it's only argument and removes all values that aren't even from the given array.
 
-var nums = [1, 2, 3, 6, 22, 98, 45, 23, 22, 12];
 function evenFinder(nums) {
   
   for(var x in nums) {
-    if(nums[x] % 2 === 1) {
-      alert: nums[x];
+    if(nums[x] % 2 !== 0) {
+    nums.splice(x,1);
     }
   }
+  return nums;
 };
 
+evenFinder(nums);
 
 //Next problem
 
@@ -87,7 +88,22 @@ var odds = [];
 
 
 
-//Code Here
+var nums = [1, 2, 34, 54, 55, 34, 32, 11, 19, 17, 54, 66, 13];
+var evens = [];
+var odds = [];
+
+function divider(nums, evens, odds) {
+  for (var f in nums) {
+    if(nums[f] % 2 !== 0) {
+      odds.push(nums[f]);
+     } else {
+     evens.push(nums[f]);
+     };
+  } 
+  return [odds, evens];
+};
+
+console.log(divider(nums, evens, odds));
 
 
 //Next Problem
@@ -118,7 +134,10 @@ function finder() {
 var str = 'this is my sentence';
 //Write a function called reverse that takes a given str as it's only argument and returns that string after it's been reversed
 
-//Code Here
+function reverse(str) {
+  return str.split('').reverse().join('');
+};
+console.log(reverse(str));
 
 
 //Next Problem
