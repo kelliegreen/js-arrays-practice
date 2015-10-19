@@ -33,7 +33,13 @@ last(arr);
 var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
 //Create a function named 'looper' that is given family as it's only argument, loops through the given array, and alerts every item in the array.
 
-//Code Here
+function looper(family) {
+  for(var v in family) {
+    alert(family[v]);
+  }
+};
+
+looper(family);
 
 
 //Next problem
