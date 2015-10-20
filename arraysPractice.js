@@ -160,10 +160,10 @@ console.log(reverse(str));
 function removeItem(myGroceryList, item) {
   if (myGroceryList.indexOf(item) !== -1) {
     myGroceryList.splice(myGroceryList.indexOf(item), 1);
-  } 
-   else {
-     myGroceryList.push(item);
-   }
+  }
+  else {
+    myGroceryList.push(item);
+  }
   return myGroceryList;
 }
 
@@ -181,9 +181,17 @@ console.log(removeItem(myGroceryList, 'pizza'));
 
 //Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 
-//Code Here
+var num = 215;
 
+function maker(num) {
+  var myArray = [];
+  for (var i = 1; i <= num; i++) {
+    myArray.push(i);
+  }
+  return myArray;
+};
 
+//console.log(maker(num));
 
 //Next Problem
 
@@ -192,13 +200,22 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
 //Write a function called addTen that is given 'numbers' as it's only argument and returns a new
 //array after adding ten to each item in numbers. *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 
-//Code Here
+var numbers = [5, '9', 16, 19, '25', '34', 48];
+function addTen(numbers) {
+  var newArray = [];
+  for (var i in numbers) {
+    if (typeof numbers[i] !== "number")
+      numbers[i] = parseInt(numbers[i]);
+    newArray.push((numbers[i] + 10));
+  }
 
+  return newArray;
+};
+
+console.log(addTen(numbers));
 
 
 //Next Problem
-
-
 
 var num1 = Math.floor(Math.random() * (30 - 0) + 0);
 var num2 = Math.floor(Math.random() * (30 - 0) + 0);
@@ -210,10 +227,19 @@ for (var i = 0; i < num1; i++) {
 for (var i = 0; i < num2; i++) {
   arr2.push(i);
 }
+
 //Above is some code that adds a random number of values to both arr1 and arr2.
 //Write a function that is given arr1 and arr2 as it's only arguments. Return the array which is longest.
 
-//Code Here
+function greater(arr1, arr2) {
+  if (arr1.length > arr2.length) {
+    return (arr1);
+  } else {
+    return (arr2);
+  };
+};
+
+console.log(greater(arr1, arr2));
 
 
 /*As a continuation of the previous problem, write another function called 'both'.
@@ -221,13 +247,20 @@ for (var i = 0; i < num2; i++) {
   'both' should return a new array full of numbers that are found in both arr1 and arr2.
 */
 
-//Code Here
-  
-  
+function both(arr1, arr2) {
+  var sameNum = [];
+  for (var i in arr1) {
+    if(arr2.indexOf(arr1[i]) !== -1) {
+      sameNum.push(arr1[i]);
+    }
+  }
+  return (sameNum);
+};
+
+console.log(both(arr1, arr2));
   
 
 //NEXT PROBLEM
-
 
 
 
